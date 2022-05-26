@@ -1,0 +1,30 @@
+<app-home></app-home>
+<hr>
+<app-contact></app-contact>
+<hr>
+<div>
+    <h2>Two Way DataBinding - Property / Event</h2>
+    <label for="">Enter the Name</label>
+    <input type="text" [(ngModel)]="book.name"> <br> {{book.name}}
+</div>
+<h1>Angular Data Binding</h1>
+<div>
+    <h2 style="color:red">Interpolation</h2>
+    <h2>{{title}}</h2>
+    <h3>{{msg}}</h3>
+    <h3>Book Details</h3>
+    <h3>ISBN : {{book.isbn}}</h3>
+    <h3>NAME :{{book.name}}</h3>
+    <h3>PRICE : {{book.price}}</h3>
+</div>
+<hr>
+<div>
+    <h2 style="color: green;">Property Binding</h2>
+    <img [src]="imgLoc">
+    <button [disabled]="status">Click</button>
+</div>
+<hr>
+<div>
+    <h2 style="color: blue;">Event Binding</h2>
+    <button (click)="showMessage()">Show</button>
+</div>
