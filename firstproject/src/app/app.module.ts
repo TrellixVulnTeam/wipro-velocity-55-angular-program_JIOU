@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { IndustriesComponent } from './industries/industries.component';
 import { CloudComponent } from './cloud/cloud.component';
+import { AdminModule } from './admin/admin.module';
 
 //Decorator that marks a class as an NgModule and supplies configuration metadata.
 @NgModule({
@@ -22,7 +23,8 @@ import { CloudComponent } from './cloud/cloud.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

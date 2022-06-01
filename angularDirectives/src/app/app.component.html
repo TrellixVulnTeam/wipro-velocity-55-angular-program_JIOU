@@ -1,0 +1,40 @@
+<app-password-validator [childTitle]="title" (event)="addMessage($event)">
+
+</app-password-validator>
+{{msgfromChild}}
+<div>
+    <h2 appHighlight>Structural Directive</h2>
+    <div *ngIf="productList.length == 0">
+        <h3>Product List Is Empty</h3>
+    </div>
+    <div *ngIf="productList.length>0">
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of productList">
+                    <th [ngStyle]="{
+                      'color': product.id==101? 'red' : 'yellow',
+                      'font-size' : product.id==102? '20px':'30px'
+                    }
+                    ">{{product.id}}</th>
+                    <th [ngClass]="{
+                         'text-green' : product.name=='HTC',
+                          'text-blue' : product.name== 'Dell'
+                    }        
+                    ">{{product.name}}</th>
+                    <th>{{product.price}}</th>
+                    <th>{{product.quantity}}</th>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>

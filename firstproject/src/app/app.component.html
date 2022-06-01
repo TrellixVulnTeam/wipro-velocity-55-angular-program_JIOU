@@ -18,6 +18,9 @@
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/contact">Contact Us</a>
                 </li>
+                <li>
+                    {{title | uppercase}} {{book.price | currency:'eur'}}
+                </li>
             </ul>
         </div>
     </div>

@@ -10,7 +10,6 @@ export class ContactComponent implements OnInit {
   contactForm: any;
 
   // Dependency Injection -  remove the dependent between two class - loose coupling
-
   // Amazon depends on Seller or Seller depends on Amazon
   // FormBuilder 
   // x = new FormBuilder();
