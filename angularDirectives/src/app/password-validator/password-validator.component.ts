@@ -10,24 +10,21 @@ export class PasswordValidatorComponent implements OnInit {
 
   @Input() childTitle = ''
   @Output() event = new EventEmitter()
-
-
   constructor() { }
-
   ngOnInit(): void {
   }
-
   validatePassword(password: string) {
-
     let errorMsg = ''
     alert(password)
-    if (!(password.length > 8 && password.length < 20)) {
+    if (password.length > 20) {
       errorMsg = 'Password length is greater than the specified length.'
+    }
+    else if (password.length < 8) {
+      errorMsg = 'Password length is lesser than the specified length.'
     }
     else {
       errorMsg = 'Valid Password'
     }
     this.event.emit(errorMsg)
   }
-
 }
