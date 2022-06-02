@@ -6,8 +6,6 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./password-validator.component.css']
 })
 export class PasswordValidatorComponent implements OnInit {
-
-
   @Input() childTitle = ''
   @Output() event = new EventEmitter()
   constructor() { }
