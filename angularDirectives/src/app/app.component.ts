@@ -9,6 +9,11 @@ export class AppComponent {
   title = 'angularDirectives from parent component (app component)';
   constructor(private el: ElementRef) {
   }
+
+
+  dateOfJoining = new Date(2020, 4, 5)
+
+
   msgfromChild = ''
   addMessage(val: string) {
     this.msgfromChild = val

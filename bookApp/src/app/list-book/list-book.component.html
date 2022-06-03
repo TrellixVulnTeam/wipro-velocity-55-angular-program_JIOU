@@ -1,0 +1,9 @@
+<div class="container d-flex">
+    <div class="card" *ngFor="let book of bookList">
+        <div class="card-body">
+            <h5 class="card-title">{{book.bookName}}</h5>
+            <p class="card-text">{{book.price}}</p>
+            <p class="card-text">{{book.authorName}}</p>
+        </div>
+    </div>
+</div>

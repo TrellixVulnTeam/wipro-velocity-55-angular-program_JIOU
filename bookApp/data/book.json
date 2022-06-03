@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+      "bookName": "Angular",
+      "price": "250",
+      "authorName": "Siva K",
+      "id": 1
+    },
+    {
+      "bookName": "Java ",
+      "price": "300",
+      "authorName": "Sathish G",
+      "id": 2
+    },
+    {
+      "bookName": "Python",
+      "price": "400",
+      "authorName": "Mani",
+      "id": 3
+    },
+    {
+      "bookName": "C#",
+      "price": "450",
+      "authorName": "Murali",
+      "id": 4
+    }
+  ]
+}

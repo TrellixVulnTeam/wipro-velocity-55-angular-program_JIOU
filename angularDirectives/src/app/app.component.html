@@ -1,7 +1,7 @@
 <app-password-validator [childTitle]="title" (event)="addMessage($event)">
 
 </app-password-validator>
-{{msgfromChild}}
+{{dateOfJoining | date : 'short'}} {{msgfromChild}}
 <div>
     <h2 appHighlight>Structural Directive</h2>
     <div *ngIf="productList.length == 0">

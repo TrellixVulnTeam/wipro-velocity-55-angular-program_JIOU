@@ -1,0 +1,24 @@
+<div class="container">
+    <h3>Book App</h3>
+    <!-- Reactive Forms  / import  ReactiveFormModule-->
+    <form [formGroup]="booKForm" (submit)="postData()">
+        <div class="form-group">
+            <label for="bookName">Book Name</label>
+            <input id="bookName" class="form-control" type="text" formControlName="bookName">
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input id="price" class="form-control" type="text" formControlName="price">
+        </div>
+        <div class="form-group">
+            <label for="authorName">Author Name</label>
+            <input id="authorName" class="form-control" type="text" formControlName="authorName">
+        </div>
+        <div class="form-group">
+
+            <input class="btn btn-primary" type="submit" value="Add Book">
+        </div>
+    </form>
+
+
+</div>
