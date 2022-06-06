@@ -1,2 +1,39 @@
-<app-add-book></app-add-book>
-<app-list-book></app-list-book>
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon (click)="drawer.toggle()">menu</mat-icon>
+  </button>
+    <span>Book App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+   <mat-icon>share</mat-icon>
+ </button>
+</mat-toolbar>
+<mat-sidenav-container class="exmaple-container">
+    <mat-sidenav mode="side" opened>
+        <span>Upload</span>
+        <span>View</span>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        Main Content
+    </mat-sidenav-content>
+</mat-sidenav-container>
+<mat-drawer-container class="example-container1" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <mat-list role="list">
+            <mat-list-item role="listitem">Item 1</mat-list-item>
+            <mat-list-item role="listitem">Item 2</mat-list-item>
+            <mat-list-item role="listitem">Item 3</mat-list-item>
+        </mat-list>
+        <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+        <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button>
+    </mat-drawer>
+</mat-drawer-container>
+
+
+<!-- <app-add-book></app-add-book>
+    <app-list-book></app-list-book> -->

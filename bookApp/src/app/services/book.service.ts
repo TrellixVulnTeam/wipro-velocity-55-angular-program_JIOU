@@ -16,6 +16,8 @@ export class BookService {
     constructor(private httpClient: HttpClient) {
     }
     insertBookDetails(book: Book): Observable<Book> {
+
+
         let data = JSON.stringify(book);
         let x = this.httpClient.post<Book>(this.url, data, {
             headers: {
