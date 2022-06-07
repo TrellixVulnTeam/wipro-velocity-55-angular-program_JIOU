@@ -1,0 +1,44 @@
+<div class="container">
+    <h3>Video Upload - Template Driven Forms</h3>
+    <form #videoUploadForm="ngForm" (submit)="uploadVideo()">
+        <div class="form-group">
+            <label for="url">Video Url</label>
+            <input id="url" class="form-control" type="text" name="url" #url="ngModel" required minlength="5" [(ngModel)]="video.url">
+            <span class="error-message" *ngIf="url.invalid && (url.dirty || url.touched)"> 
+                  <span *ngIf="url.errors?.['required']">
+                     Url Is Required
+                 </span>
+            <span *ngIf="url.errors?.['minlength']">
+                     Url Must be atleast 5 charcters
+                 </span>
+            </span>
+        </div>
+        <div class="form-group">
+            <label for="title">Video Title</label>
+            <input id="title" class="form-control" type="text" name="title" maxlength="50" required [(ngModel)]="video.title">
+        </div>
+        <div class="form-group">
+            <label for="">Audience Type </label>
+            <div class="form-check">
+                <input id="" class="form-check-input" type="radio" name="videotype" value="Yes,its made for Kids" [(ngModel)]="video.videotype">
+                <label for="videotype" class="form-check-label">Yes,its made for Kids</label>
+            </div>
+            <div class="form-check">
+                <input id="" class="form-check-input" type="radio" name="videotype" value="Not for kids" ngModel>
+                <label for="videotype" class="form-check-label">Not for kids</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="">Distribution</label>
+            <select id="" class="form-control" name="distribution" [(ngModel)]="video.distribution">
+             <option value="Everywhere">Everywhere</option>
+             <option value="Private">Make this video available only on monetized platforms</option>
+         </select>
+        </div>
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Upload" [disabled]="videoUploadForm.invalid">
+        </div>
+    </form>
+</div>
+{{videoUploadForm.value | json}}
+<br>{{videoUploadForm.status}}

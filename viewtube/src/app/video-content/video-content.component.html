@@ -1,0 +1,10 @@
+<div class="container d-flex">
+    <div class="card" *ngFor="let video1 of updatedVideoList">
+        <div class="card-body">
+            <h5 class="card-title">{{video1.url}}</h5>
+            <p class="card-text">{{video1.title}}</p>
+            <p class="card-text">{{video1.videotype}}</p>
+            <p class="card-text">{{video1.distribution}}</p>
+        </div>
+    </div>
+</div>
